@@ -1,0 +1,13 @@
+[Unit]
+Description=Startup script
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/startup_hook.py
+EnvironmentFile=-/etc/default/startup_hook
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
