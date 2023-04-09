@@ -1,6 +1,6 @@
 [Unit]
 Description=Startup script
-After=network.target
+After=network.target network-online.target
 
 [Service]
 ExecStart=/usr/local/bin/startup_hook.py
@@ -9,5 +9,5 @@ Type=oneshot
 RemainAfterExit=yes
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=network-online.target
 

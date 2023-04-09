@@ -1,9 +1,10 @@
 #!/bin/env python3
 
-import datetime, zoneinfo, os, requests, socket, subprocess, json
+import datetime, zoneinfo, os, requests, socket, subprocess, time, json
 
 
 def main():
+    time.sleep(5)
     hostname = socket.gethostname()
 
     def get_address(addr_info):

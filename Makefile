@@ -1,8 +1,8 @@
 build:
 
 install:
-	sudo install startup_hook.py /usr/local/bin/startup_hook.py
-	sudo install startup_hook.service /etc/systemd/system/startup_hook.service
+	sudo install -m 755 startup_hook.py /usr/local/bin/startup_hook.py
+	sudo install -m 644 startup_hook.service /etc/systemd/system/startup_hook.service
 	sudo touch /etc/default/startup_hook
 	sudo systemctl daemon-reload
 	sudo systemctl enable startup_hook
